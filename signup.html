@@ -24,23 +24,31 @@
             <section class="col">
                 
                 <h1>Creat Account </h1>
-                <p>Hurry Up ,insert your information to get the offer!</p>
+                <p>Go ahead and sign up, let everyone know how awesome you are!</p>
                     
+                <form id="form" action="" autocomplete="off">
                 <div class="icons">
-                    <div class="input-icons "> <i class="fa fa-user icon"></i>
-                    <input class="input-field form-control pt-2 pb-2" type="text" placeholder="Username"></div>
-                    <div class="input-icons">  <i class="fa fa-envelope icon"></i>
-                    <input class="input-field form-control pt-2 pb-2" type="email" placeholder="Email"></div>
-                    <div class="input-icons">   <i class="fas fa-lock"></i>
-                    <input class="input-field form-control pt-2 pb-2" type="password" placeholder="Password"> </div>
-                    <div class="input-icons">  <i class="fas fa-lock"></i>
-                    <input class="input-field form-control pt-2 pb-2" type="password" placeholder="Confirm password"> </div>
-                    <div href="signup.html" class="btn btn-primary mb-2 d-block">Create Account</div></div>
+                    <div class="input-icons "> <i class="fa fa-user icon"><hr></i>
+                    <input id="userName" class="input-field form-control pt-2 pb-2" type="text" placeholder="Username">
+                      <p class="error username-error"></p></div>
+                    <div class="input-icons">  <i class="fa fa-envelope icon"><hr></i>
+                    <input id="email" class="input-field form-control pt-2 pb-2" type="email" placeholder="Email">
+                    <p class="error email-error"></p></div>
+                    <div class="input-icons">   <i class="fas fa-lock"><hr></i>
+                    <input id="password" class="input-field form-control pt-2 pb-2" type="password" placeholder="Password">
+                    <p class="error password-error"></p> </div>
+                    <div class="input-icons">  <i class="fas fa-lock"><hr></i>
+                    <input id="confirmPassword" class="input-field form-control pt-2 pb-2" type="password" placeholder="Confirm password">
+                    <p class="error confirmpassword-error"></p> </div>
+                    <div id="btn" class="btn btn-warning mb-2 d-block">Create Account</div></div>
+                </form>
                   </section>
             </div> 
               
             </div>
-        
+
+        <script src="signuppage.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
         

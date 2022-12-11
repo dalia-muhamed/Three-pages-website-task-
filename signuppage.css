@@ -1,6 +1,8 @@
 *{box-sizing: border-box;}
-body{background-color: aqua;}
-.wrapper{height: 100vh;
+
+.wrapper{background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
+         background-blend-mode: normal, normal, screen, overlay, normal;
+         height: 100vh;
          display:flex;
          align-items: center;
          justify-content: center;
@@ -22,30 +24,42 @@ body{background-color: aqua;}
     justify-content: center;
     margin:0 1em;
     }
-    .col:nth-child(2)> *{flex:0.2;}
-    .col .input-icons{
+   .col:nth-child(2)> *{flex:0.2;}
+   .col .input-icons{
                     position: relative;
                     display: flex;
                     flex-direction: column;
                     }    
-     .input-field, .input-icons>div{padding-left: 40px;
-                    margin:0.5rem ;
-                    }
+   .input-field, .input-icons>div{
+                    padding-left: 40px;
+                    margin:0.5rem ;}
 
-   .input-icons > i{color: #aaa;
+   .input-icons > i{color: rgb(176, 174, 47);
                    position: absolute;
-                   left: 0px;
-                   top:5px;
+                   left: 4px;
+                   top:10px;
                    padding:10px 15px; }
-     .input-icons:focus + i {color:red}              
-                          
+              
+     hr{border-left:21px solid rgb(184, 176, 24);
+        transform:rotate(90deg)
+        translate(-22px,-13px)}                     
    img{max-width: 100%;
        max-height: 90%;
        border-radius: 15px;} 
      .btn{margin:0.4em 0}  
 
-       @media screen and (orientation:portrait)
-       {
+ .error{display:none;
+        max-height: 3px;}
+
+.display-error{
+      color:#af4242;
+      display: inline-block;
+      transform: translate(13px,-6px); }
+     @media (max-height) {
+      .col:nth-child(2){min-height: 100vh;}
+     }
+
+       @media screen and (orientation:portrait){
      
      .container{flex-direction: column;
                 justify-content: center;
