@@ -33,7 +33,21 @@ function SignUpvalidateForm() {
     }   
     if(!isValidPassword){ 
         showError("confirmpassword-error","Passwords Doesn't match");   
-    }   
+    }
+    const isValidForm =  isValidUserName &&   isValidEmail && password.length >= 8 && isValidPassword
+    if(isValidForm){
+        return signUp() 
+    }
+  }
+  const signUp = ()=>{
+    $('#form').submit(function(e){
+        e.preventDefault()
+       const mydata= $(this).serialize();
+     console.log($(mydata));
+       $.post('https://www.discoveryvip.com/posttest.php',mydata).done(function(data){
+        console.log(data);
+       }) 
+      })
   }
 
  const signUpSubmitButton = document.getElementById('btn');
