@@ -20,7 +20,7 @@ function SignUpvalidateForm() {
     const isValidUserName = /^[a-zA-Z_][a-zA-Z0-9_][a-zA-Z_]{3,13}$/.test(username)
     const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)
     const isValidPassword = password === confirmPassword
-        clearError()
+    clearError()
     if(!isValidUserName){ 
         showError("username-error","Please enter a valid Username");
     }
@@ -34,7 +34,7 @@ function SignUpvalidateForm() {
     if(!isValidPassword){ 
         showError("confirmpassword-error","Passwords Doesn't match");   
     }
-    const isValidForm =  isValidUserName &&   isValidEmail && password.length >= 8 && isValidPassword
+    const isValidForm = isValidUserName && isValidEmail && password.length >= 8 && isValidPassword
     if(isValidForm){
         return signUp() 
     }
@@ -42,11 +42,12 @@ function SignUpvalidateForm() {
   const signUp = ()=>{
     $('#form').submit(function(e){
         e.preventDefault()
-       const mydata= $(this).serialize();
-     console.log($(mydata));
-       $.post('https://www.discoveryvip.com/posttest.php',mydata).done(function(data){
-        console.log(data);
-       }) 
+        
+        const mydata= $(this).serialize();
+        console.log($(mydata));
+        $.post('https://www.discoveryvip.com/posttest.php',mydata).done(function(data){
+            console.log(data);
+        }) 
       })
   }
 
