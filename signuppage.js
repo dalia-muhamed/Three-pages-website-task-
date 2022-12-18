@@ -47,7 +47,9 @@ const signUp = () => {
     const mydata = $(this).serialize();
     $.post("https://www.discoveryvip.com/posttest.php", mydata).done(function (
       data
-    ) {});
+    ) {
+      window.location.href = "finalpage.html";
+    });
   });
 };
 
