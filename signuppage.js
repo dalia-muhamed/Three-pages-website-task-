@@ -48,6 +48,7 @@ const signUp = () => {
     $.post("https://www.discoveryvip.com/posttest.php", mydata).done(function (
       data
     ) {
+      localStorage.setItem("email", data.email);
       window.location.href = "finalpage.html";
     });
   });
